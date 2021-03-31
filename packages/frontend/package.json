@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Monarch Wadia",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "echo 'Disabled for now'"
+  }
 }
