@@ -5,9 +5,11 @@
   "author": "Monarch Wadia",
   "license": "MIT",
   "scripts": {
-    "dev": "echo 'Disabled for now'"
+    "dev": "node index.js",
+    "dev-nodemon": "nodemon index.js"
+
   },
-  "dependencies": {
+  "devDependencies": {
     "nodemon": "^2.0.7"
   }
 }

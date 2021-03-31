@@ -10,6 +10,9 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "yarn workspaces run dev"
+    "dev": "yarn workspaces run dev",
+    "start-backend" : "cd ./packages/backend && yarn dev-nodemon",
+    "start-frontend" : "cd ./packages/frontend && yarn dev-nodemon",
+    "start-commons" : "cd ./packages/commons && yarn dev-nodemon"
   }
 }
