@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Dev Collective",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "git@github.com:Mintbean/dc-portfolio-site.git",
+  "workspaces": [
+    "packages/*"
+  ]
 }
