@@ -5,11 +5,6 @@
   "author": "Monarch Wadia",
   "license": "MIT",
   "scripts": {
-    "dev": "echo 'Disabled, this is just a library.'",
-    "dev-nodemon": "nodemon index.js"
-
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
+    "dev": "echo 'Disabled, this is just a library.'"
   }
 }
