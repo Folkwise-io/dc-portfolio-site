@@ -5,9 +5,13 @@
   "author": "Monarch Wadia",
   "license": "MIT",
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "dev-nodemon": "nodemon index.js"
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
