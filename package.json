@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "yarn workspaces run dev",
     "start-backend": "cd ./packages/backend && yarn dev-nodemon",
-    "start-frontend": "cd ./packages/frontend && yarn dev-nodemon"
+    "start-frontend": "yarn --cwd packages/frontend start"
   },
   "dependencies": {
     "typescript": "^4.2.3"
