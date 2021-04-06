@@ -9,7 +9,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', require('./api'))
-
+// app.get('./', function(req,res) {
+//   res.send('hello world') 
+// });
 
 
 app.use((err, req, res, next) => {
