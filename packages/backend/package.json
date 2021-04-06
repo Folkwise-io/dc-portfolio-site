@@ -7,8 +7,7 @@
   "scripts": {
     "dev": "node index.js",
     "dev-nodemon": "nodemon index.js",
-    "db:init": "createdb dc-portfolio-site & yarn db:addTable",
-    "db:addTable": "yarn db:migrate & yarn db:seed",
+    "db:init": "createdb dc-portfolio-site & yarn db:migrate",
     "db:migrate": "npx knex migrate:latest",
     "db:seed": "npx knex seed:run"
   },
