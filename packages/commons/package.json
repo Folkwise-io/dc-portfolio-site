@@ -8,6 +8,8 @@
     "dev": "echo 'Disabled, this is just a library.'"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.4"
   }
 }
