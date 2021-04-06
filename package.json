@@ -11,8 +11,11 @@
   ],
   "scripts": {
     "dev": "yarn workspaces run dev",
-    "start-backend": "cd ./packages/backend && yarn dev-nodemon",
-    "start-frontend": "yarn --cwd packages/frontend start"
+    "start-backend": "yarn --cwd packages/backend dev-nodemon",
+    "start-frontend": "yarn --cwd packages/frontend start",
+    "db-init": "yarn --cwd packages/backend db:init",
+    "db-migrate": "yarn --cwd packages/backend db:migrate",
+    "db-seed": "yarn --cwd packages/backend db:seed"
   },
   "dependencies": {
     "typescript": "^4.2.3"
