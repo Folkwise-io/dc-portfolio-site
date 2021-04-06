@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "ts-jest": "^26.5.4"
   }
 }
