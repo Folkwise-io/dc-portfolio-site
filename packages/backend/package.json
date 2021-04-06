@@ -6,10 +6,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "node index.js",
-    "dev-nodemon": "nodemon index.js"
+    "dev-nodemon": "nodemon index.js",
+    "db:migrate": "npx knex migrate:latest",
+    "db:seed": "npx knex seed:run"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "knex": "^0.95.4",
     "pg": "^8.5.1"
   },
   "devDependencies": {
