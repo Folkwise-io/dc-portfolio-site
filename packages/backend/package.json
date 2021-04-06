@@ -7,10 +7,13 @@
   "scripts": {
     "dev": "node index.js",
     "dev-nodemon": "nodemon index.js",
+    "db:init": "createdb dc-portfolio-site & yarn db:addTable",
+    "db:addTable": "yarn db:migrate & yarn db:seed",
     "db:migrate": "npx knex migrate:latest",
     "db:seed": "npx knex seed:run"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "knex": "^0.95.4",
     "pg": "^8.5.1"
