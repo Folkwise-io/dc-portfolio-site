@@ -1,5 +1,5 @@
 'use strict'
-
+require("ts-node/register")
 // ref: https://devhints.io/knex
 // TODO: implement more dynamic env var settings loader
 module.exports = {
@@ -11,6 +11,6 @@ module.exports = {
     },
     seeds: {
       directory: `${ __dirname }/db/seeds`
-    }
-  
+    },
+    timezone: 'UTC'
 }
