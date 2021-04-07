@@ -1,4 +1,4 @@
-exports.up = knex => {
+exports.up = function(knex) {
   return knex.schema.createTable('users', t => {
     t.increments('id').primary().unsigned()
     t.string('username').unique().index()
@@ -8,8 +8,8 @@ exports.up = knex => {
     t.timestamp('created_at').defaultTo(knex.fn.now())
     t.timestamp('updated_at').defaultTo(knex.fn.now())
   })
-}
+};
 
-exports.down = knex => {
+exports.down = function(knex) {
   return knex.schema.dropTable('users')
-}
+};
