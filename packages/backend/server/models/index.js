@@ -15,7 +15,7 @@ const files = getModelFiles(__dirname)
 
 const models = files.reduce((modelsObj, fileName) => {
   const initModel = require(fileName)
-  const model = initModel(knex)
+  const model = initModel(knexgit)
 
   if(model) modelsObj[model.name] = model
 
