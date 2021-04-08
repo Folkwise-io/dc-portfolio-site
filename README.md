@@ -14,12 +14,13 @@ All scripts can be run from the root.
 
 ### Populating DB
 
-`yarn db-init` : Creates the database and runs first migration to pull in new models (will be initally empty)
-`yarn db-seed` : Populates the tables with seed data
-`yarn db-migrate` : Runs another migration in case you add another table
+`yarn db:init` : Creates the database and runs first migration to pull in new models (will be initally empty)
+`yarn db:seed` : Populates the tables with seed data
+`yarn db:migrate` : Runs another migration in case you add another table
 
-### Updating Table
-`yarn knex migrate:make __migration-name__` : updates our db schema 
+### Updating Table -Need to be in backend-
+`yarn knex migrate:make __migration-name__` : creates new migration template ts file
+`yarn knex seed:make __seed-name__` : creates new template seed ts file 
 
 ## Requirements
 
