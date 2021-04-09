@@ -2,12 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const sum = (a:number, b:number):number => {
+    return a + b
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {sum(1, 1)}
         </p>
         <a
           className="App-link"
