@@ -12,11 +12,14 @@ module.exports = {
   },
   module: {
     rules: [
+      {
       test: /\.jsx?$/,
       loader: "babel-loader",
       options: {
         presets: ["@babel/env", "@babel/react"],
         plugins: [],
+        },
+      },
     ],
   },
 }
