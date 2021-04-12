@@ -45,7 +45,6 @@ module.exports = (knex) => {
       .timeout(guts.timeout)
       .then((user) => {
         if (!user) throw matchErrorMsg;
-
         return user;
       })
       .then((user) =>
