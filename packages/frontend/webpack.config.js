@@ -21,7 +21,14 @@ module.exports = {
         plugins: [],
         },
       },
+      {
+        test: /\.css$/,
+        loader: "css-loader",
+      },
     ],
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [new HtmlWebpackPlugin({
+    template: path.join(__dirname, "src/index.html"),
+    }),
+  ],
 }
