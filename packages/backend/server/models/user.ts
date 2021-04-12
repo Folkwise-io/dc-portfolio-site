@@ -1,4 +1,5 @@
 'use strict';
+export {};
 
 const bcrypt = require('bcrypt');
 const createGuts = require('../helpers/model-guts');
