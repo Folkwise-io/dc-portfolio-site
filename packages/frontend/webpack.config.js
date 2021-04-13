@@ -4,8 +4,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
   entry: "/src/index.js",
+  target: "web",                                          //after ts
+  mode: "development",                                    //after ts
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],  //after ts
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -14,8 +16,12 @@ module.exports = {
   },
   module: {
     rules: [
+      {                                                    //after ts
+        test: /\.(ts|tsx)$/,                               //after ts
+        loader: "ts-loader",                               //after ts
+      },                                                   //after ts
       {
-      test: /\.jsx?$/,
+      test: /\.jsx?$/,                                     //ask monarch/team - redundant?
       loader: "babel-loader",
       options: {
         presets: ["@babel/env", "@babel/react"],
