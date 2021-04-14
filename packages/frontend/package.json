@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "webpack --mode development",
+    "start": "webpack serve",
     "dev": "nodemon ./src/index.tsx"
   },
   "devDependencies": {
