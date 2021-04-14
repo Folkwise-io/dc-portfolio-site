@@ -10,8 +10,7 @@
   },
   "scripts": {
     "build": "webpack --mode development",
-    "start": "webpack serve",
-    "dev": "nodemon ./src/index.tsx"
+    "dev": "webpack serve"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
