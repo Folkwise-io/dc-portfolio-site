@@ -1,7 +1,19 @@
 const router = require('express').Router();
 
-router.post('*', (req, res, next) => {
-  res.send(req.body.equation || 'hello world. this is the express server')
+router.get('/', (req, res, next) => {
+  try {
+    res.send('Hello world. This is the express server')    
+  } catch (error) {
+    next()
+  }
+})
+
+router.post('/', (req, res, next) => {
+  try {
+    res.send(req.body)    
+  } catch (error) {
+    next()
+  }
 })
 
 module.exports = router; 

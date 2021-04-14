@@ -1,4 +1,7 @@
-exports.up = knex => {
+import { Knex } from "knex";
+
+//Creates the tables. Different schema validations can be found at http://knexjs.org/#Schema
+export async function up(knex: Knex): Promise<void> {
   return knex.schema.createTable('users', t => {
     t.increments('id').primary().unsigned()
     t.string('username').unique().index()
@@ -10,6 +13,8 @@ exports.up = knex => {
   })
 }
 
-exports.down = knex => {
+
+export async function down(knex: Knex): Promise<void> {
   return knex.schema.dropTable('users')
 }
+
