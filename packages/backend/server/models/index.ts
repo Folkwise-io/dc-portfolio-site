@@ -2,11 +2,9 @@
 //Bypass for redeclare block-scope ts error
 export {};
 
-import { Knex } from "knex";
 const fs = require('fs');
 const path = require('path');
 const knex = require('../../config/database');
-
 
 //Function to read all the files within this directory and exports as properties as an object
 const getModelFiles = (dir) =>
@@ -17,23 +15,6 @@ const getModelFiles = (dir) =>
 
 //Grabs all files within this directory
 const files = getModelFiles(__dirname)
-
-type Model = (...args: any) => any
-
-interface User {
-  name : string;
-  tableName : string;
-  selectableProps: string[];
-  timeout: number;
-  create: () => any;
-  findAll: () => any;
-  find: () => any;
-  findOne: () => any;
-  findById: () => any;
-  update: () => any;
-  destroy: () => any;
-  verify: () => any;
-}
 
 //Creates an object for all models with its associate methods 
 const models = files.reduce((modelsObj, fileName) => {
