@@ -8,7 +8,6 @@ const selectableProps = ['id', 'counter'];
 
 const createGuts = require('../helpers/model-guts');
 
-
 module.exports = (knex) => {
   const guts = createGuts({
     knex,
