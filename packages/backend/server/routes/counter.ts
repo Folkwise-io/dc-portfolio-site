@@ -1,3 +1,4 @@
+export {}
 const router = require('express').Router(); 
 
 const {Counter} = require('../models');  
