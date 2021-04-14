@@ -1,4 +1,5 @@
 'use strict';
+export {};
 
 const bcrypt = require('bcrypt');
 const createGuts = require('../helpers/model-guts');
@@ -45,7 +46,6 @@ module.exports = (knex) => {
       .timeout(guts.timeout)
       .then((user) => {
         if (!user) throw matchErrorMsg;
-
         return user;
       })
       .then((user) =>

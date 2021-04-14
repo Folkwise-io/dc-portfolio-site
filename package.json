@@ -11,9 +11,9 @@
   ],
   "scripts": {
     "dev": "concurrently 'yarn --cwd packages/frontend dev' 'yarn --cwd packages/backend dev'",
-    "db-init": "yarn --cwd packages/backend db:init",
-    "db-migrate": "yarn --cwd packages/backend db:migrate",
-    "db-seed": "yarn --cwd packages/backend db:seed"
+    "db:init": "yarn --cwd packages/backend db:init",
+    "db:migrate": "yarn --cwd packages/backend db:migrate",
+    "db:seed": "yarn --cwd packages/backend db:seed"
   },
   "dependencies": {
     "typescript": "^4.2.3"
