@@ -5,7 +5,7 @@ import "./style.css"
 const App = () => {
   return(
     <div className="title-box">
-      <h1 className="title">Ahoy there, Collectivists! Here be Dragons!</h1>
+      <h1 className="title">Ahoy there, Collectivists! Here be Dragons! Arrrgh!</h1>
     </div>
   )
 }

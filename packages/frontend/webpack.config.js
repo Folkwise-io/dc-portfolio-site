@@ -32,9 +32,7 @@ module.exports = {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],  //after ts
   },
   output: {
-    path: path.join(__dirname, "dist"),
-    filename: "bundle.js",
-    publicPath: "./",
+    filename: "bundle.js"
   },
   devServer: {
     port: 4000,
@@ -43,7 +41,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src/index.html"),
+      template: "src/index.html",
+      hash: true,
+      filename: 'index.html'
     }),
     new MiniCssExtractPlugin(),
   ],
