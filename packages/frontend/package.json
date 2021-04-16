@@ -11,7 +11,9 @@
   },
   "scripts": {
     "build": "webpack --mode development",
-    "dev": "webpack serve"
+    "dev": "webpack serve",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
