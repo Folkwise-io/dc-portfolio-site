@@ -1,9 +1,17 @@
 import { hot } from 'react-hot-loader';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
+import axios from 'axios';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
+
+  useEffect( () =>{
+    const data = (async () => {
+      return await axios.get('http://localhost:5000/counter')
+  })();
+    console.log(data)
+  })
 
   function changeCounter(action: string) {
     switch (action) {

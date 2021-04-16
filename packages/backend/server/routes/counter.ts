@@ -5,8 +5,9 @@ const {Counter} = require('../models');
 
 router.get('/', async (req, res, next) => {
     try {
-        const {counter} = await Counter.findById(1);
-        res.send(counter);
+        const data = await Counter.findById(1);
+        const counter = await data[0].counter;
+        res.send({counter});
     } catch (error) {
         next(error);         
     }        
