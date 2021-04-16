@@ -27,7 +27,16 @@ const beforeSave = (user) => {
 
 module.exports = (knex) => {
   // Augment default `create` function to include custom `beforeSave` logic.
-  const create = (props) => beforeSave(props).then((user) => knex.create(user));
+  const create = (props) =>
+    beforeSave(props).then((props) => {
+      delete props.id; // not allowed to set `id`
+
+      return knex
+        .insert(props)
+        .returning(selectableProps)
+        .into(tableName)
+        .timeout(timeout);
+    });
 
   const verify = (username, password) => {
     const matchErrorMsg = 'Username or password do not match';
