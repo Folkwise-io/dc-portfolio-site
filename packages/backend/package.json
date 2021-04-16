@@ -5,10 +5,12 @@
   "author": "Monarch Wadia",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon index.ts",
     "db:init": "createdb dc-portfolio-site & yarn db:migrate",
     "db:migrate": "npx knex migrate:latest",
-    "db:seed": "npx knex seed:run"
+    "db:seed": "npx knex seed:run",
+    "migrate:make": "yarn knex migrate:make",
+    "seed:make": "yarn knex seed:make"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -17,9 +19,7 @@
     "pg": "^8.5.1"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.22",
-    "jest": "^26.6.3",
     "nodemon": "^2.0.7",
-    "ts-jest": "^26.5.4"
+    "ts-node": "^9.1.1"
   }
 }

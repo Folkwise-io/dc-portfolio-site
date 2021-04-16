@@ -1,13 +1,14 @@
 'use strict';
+export {};
 
 const bcrypt = require('bcrypt');
-const createGuts = require('../helpers/model-guts');
+// const createGuts = require('../helpers/model-guts');
 
 const name = 'User';
 const tableName = 'users';
 
 const selectableProps = ['id', 'username', 'email', 'updated_at', 'created_at'];
-
+const timeout = 1000;
 // Bcrypt functions used for hashing password and later verifying it.
 const SALT_ROUNDS = 12;
 const hashPassword = (password) => bcrypt.hash(password, SALT_ROUNDS);
@@ -25,15 +26,8 @@ const beforeSave = (user) => {
 };
 
 module.exports = (knex) => {
-  const guts = createGuts({
-    knex,
-    name,
-    tableName,
-    selectableProps,
-  });
-
   // Augment default `create` function to include custom `beforeSave` logic.
-  const create = (props) => beforeSave(props).then((user) => guts.create(user));
+  const create = (props) => beforeSave(props).then((user) => knex.create(user));
 
   const verify = (username, password) => {
     const matchErrorMsg = 'Username or password do not match';
@@ -42,10 +36,9 @@ module.exports = (knex) => {
       .select()
       .from(tableName)
       .where({ username })
-      .timeout(guts.timeout)
+      .timeout(timeout)
       .then((user) => {
         if (!user) throw matchErrorMsg;
-
         return user;
       })
       .then((user) =>
@@ -58,9 +51,36 @@ module.exports = (knex) => {
       });
   };
 
+  const findAll = () =>
+    knex.select(selectableProps).from(tableName).timeout(timeout);
+
+  const findById = (id) =>
+    knex.select(selectableProps).from(tableName).where({ id }).timeout(timeout);
+
+  const update = (id, props) => {
+    delete props.id; // not allowed to set `id`
+
+    return knex
+      .update(props)
+      .from(tableName)
+      .where({ id })
+      .returning(selectableProps)
+      .timeout(timeout);
+  };
+
+  const destroy = (id) =>
+    knex.del().from(tableName).where({ id }).timeout(timeout);
+
   return {
-    ...guts,
+    name,
+    tableName,
+    selectableProps,
+    timeout,
     create,
     verify,
+    findAll,
+    findById,
+    update,
+    destroy,
   };
 };
