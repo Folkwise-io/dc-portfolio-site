@@ -5,6 +5,8 @@ import "./style.css";
 import { HashRouter, Route, Switch } from 'react-router-dom'; 
 
 import Home from './components/home'; 
+import Counter from './components/counter'; 
+
 
 const App = () => {
   return(
@@ -14,8 +16,7 @@ const App = () => {
     </div> */}
       <Switch>
         <Route path='/'>
-          <Home /> 
-          <
+          <Counter /> 
         </Route>
       </Switch>
     </HashRouter>

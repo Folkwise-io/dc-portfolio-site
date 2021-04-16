@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-interface Counter {
+interface CounterType {
   counter: number;
 }
 
-const App = () => {
+const Counter = () => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     (async () => {
-      await axios.get<Counter>('api/counter').then(response => {
+      await axios.get<CounterType>('api/counter').then(response => {
         setCounter(response.data.counter);
     });
     })()
@@ -21,13 +21,13 @@ const App = () => {
     switch (action) {
       case 'INCREMENT':
         (async () => {
-          await axios.post<Counter>('api/counter', {"change" : "INCREMENT"})
+          await axios.post<CounterType>('api/counter', {"change" : "INCREMENT"})
         })()
         setCounter(counter + 1);
         break;
       case 'DECREMENT':
         (async () => {
-          await axios.post<Counter>('api/counter', {"change" : "DECREMENT"})
+          await axios.post<CounterType>('api/counter', {"change" : "DECREMENT"})
         })()
         setCounter(counter - 1);
         break;
@@ -64,3 +64,5 @@ const App = () => {
     </main>
   );
 };
+
+export default Counter; 
