@@ -1,10 +1,29 @@
 import { hot } from 'react-hot-loader';
 import React, { useState, useEffect } from 'react';
-import './style.css';
+import { HashRouter, Route, Switch } from 'react-router-dom'; 
 import axios from 'axios';
+
+import './style.css';
+
+import Home from './components/home'; 
 
 interface Counter {
   counter: number;
+}
+
+const App = () => {
+  return(
+    <HashRouter>
+    {/* <div className="title-box">
+      <h1 className="title">Ahoy there, Collectivists! Here be Dragons!! Yargh!</h1>
+    </div> */}
+      <Switch>
+        <Route path='/'>
+          <Home /> 
+        </Route>
+      </Switch>
+    </HashRouter>
+  )
 }
 
 const App = () => {
