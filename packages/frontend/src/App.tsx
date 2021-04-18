@@ -1,10 +1,9 @@
 import { hot } from "react-hot-loader"; 
 import * as React from "react"; 
-import "./style.css"; 
+import "./style.scss"; 
 import { HashRouter, Route, Switch } from 'react-router-dom'; 
 
-import Home from './components/home'; 
-import Counter from './components/counter'; 
+import Counter from './components/Counter/counter'; 
 
 
 interface Counter {

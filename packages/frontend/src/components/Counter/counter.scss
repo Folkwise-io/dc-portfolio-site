@@ -1,0 +1,48 @@
+.section-counter {
+    position: relative;
+    height: 90vh;
+    background-color: $test-variable;
+}
+  
+.counter__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.counter__value {
+    font-size: 12rem;
+}
+
+.counter__button{
+    margin: 0 2rem;
+    padding: 1.5rem 4rem;
+
+    border: none;
+    border-radius: 10rem;
+    
+    cursor: pointer;
+}
+
+.counter__button:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(black, 0.2);  
+}
+
+.counter__button:focus{
+    outline: none;
+}
+
+.btn--red{
+    color: white;
+    background-color:lightcoral;
+}
+
+.btn--green{
+    color: white;
+    background-color:lightgreen;
+}
+  

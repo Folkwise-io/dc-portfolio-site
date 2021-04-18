@@ -1,0 +1,9 @@
+// Import global sass partials
+
+@import "sass-globals/base";
+@import "sass-globals/typography";
+@import "sass-globals/utilities";
+@import "sass-globals/variables";
+
+@import "components/Counter/counter";
+
