@@ -10,6 +10,7 @@ interface Counter {
   counter: number;
 }
 
+
 const App = () => {
   return(
     <HashRouter>
