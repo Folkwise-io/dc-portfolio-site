@@ -1,15 +1,16 @@
 body {
+    color: #777;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #777;
 }
 
 .heading-primary {
-    font-size: 3rem;
-    border: 0.1rem solid #777;
-    border-radius: 10px;
-    background: linear-gradient(178deg, lightcoral 50%, lightgreen 50%);
-    -webkit-background-clip: text;
     color: transparent;
+    font-size: 3rem;
+    background: linear-gradient(178deg, lightcoral 50%, lightgreen 50%);
+    
+    -webkit-background-clip: text;
+    border-radius: 10px;
+    border: 0.1rem solid #777;
 }
