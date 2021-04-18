@@ -38,10 +38,10 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
-    proxy: {
-      '/api': 'https://localhost:5000',
-      pathRewrite: { '^/api': '' },
-    },
+    // proxy: {
+    //   '/api': 'https://localhost:5000',
+    //   pathRewrite: { '^/api': '' },
+    // },
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -11,9 +11,6 @@ import Counter from './components/counter';
 const App = () => {
   return(
     <HashRouter>
-    {/* <div className="title-box">
-      <h1 className="title">Ahoy there, Collectivists! Here be Dragons!! Yargh!</h1>
-    </div> */}
       <Switch>
         <Route path='/'>
           <Counter /> 
