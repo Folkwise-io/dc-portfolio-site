@@ -22,6 +22,7 @@ const App = () => {
       <Switch>
         <Route path='/'>
           <Counter /> 
+          <Home /> 
         </Route>
       </Switch>
     </HashRouter>
