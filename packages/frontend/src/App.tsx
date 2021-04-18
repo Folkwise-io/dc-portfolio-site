@@ -8,7 +8,7 @@ import "./style.scss";
 
 // Components
 import Home from './components/home'; 
-import Counter from './components/counter'; 
+import Counter from './components/Counter/counter'; 
 
 
 interface Counter {
