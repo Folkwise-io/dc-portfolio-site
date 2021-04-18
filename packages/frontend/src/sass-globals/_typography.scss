@@ -1,3 +1,5 @@
+@import "./variables";
+
 body {
     color: #777;
     font-family: 'Lato', sans-serif;
@@ -8,7 +10,7 @@ body {
 .heading-primary {
     color: transparent;
     font-size: 3rem;
-    background: linear-gradient(178deg, lightcoral 50%, lightgreen 50%);
+    background: linear-gradient(178deg, $test-variable-coral 50%, $test-variable-green 50%);
     
     -webkit-background-clip: text;
     border-radius: 10px;
