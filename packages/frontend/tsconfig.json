@@ -13,6 +13,6 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/index.tsx"
+    "src/**/*"
   ]
 }
