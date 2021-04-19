@@ -3,14 +3,8 @@ import * as React from "react";
 import "./style.css"; 
 import { HashRouter, Route, Switch } from 'react-router-dom'; 
 
-import Home from './components/home'; 
+// import Home from './components/home'; 
 import Counter from './components/counter'; 
-
-
-interface Counter {
-  counter: number;
-}
-
 
 const App = () => {
   return(

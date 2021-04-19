@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "nodemon index.ts",
     "db:init": "createdb dc-portfolio-site & yarn db:migrate",
+    "db:delete": "dropdb dc-portfolio-site",
     "db:migrate": "npx knex migrate:latest",
     "db:seed": "npx knex seed:run",
     "migrate:make": "yarn knex migrate:make",
