@@ -1,10 +1,21 @@
 import React from 'react'; 
+import LoginForm from "../LoginForm";
+
+function noop() {
+  return;
+}
 
 const Home = () => {
     return (
-    <div className="title-box">
-      <h1 className="title">Ahoy there, Collectivists! Here be Dragons!! Yargh!</h1>
-    </div>
+      <div>
+      <LoginForm
+        shouldRemember={true}
+        onPasswordChange={noop}
+        onRememberChange={noop}
+        onSubmit={noop}
+        onUsernameChange={noop}
+      />
+      </div>
     )
 }
 

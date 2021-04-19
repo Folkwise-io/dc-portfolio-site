@@ -1,0 +1,18 @@
+@import "./variables";
+
+body {
+    color: #777;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.heading-primary {
+    color: transparent;
+    font-size: 3rem;
+    background: linear-gradient(178deg, $test-variable-coral 50%, $test-variable-green 50%);
+    
+    -webkit-background-clip: text;
+    border-radius: 10px;
+    border: 0.1rem solid #777;
+}
