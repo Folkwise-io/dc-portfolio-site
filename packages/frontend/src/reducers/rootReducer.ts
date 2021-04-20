@@ -10,9 +10,7 @@ const rootReducer = (state = initialState, action = {type: ''}) => {
         case 'INCREMENT':
             console.log('increment!')
             return state = {count: state.count + 1};
-            // return state;   
         case 'DECREMENT': 
-            // state.count --;  
             console.log('decrement!')
             return state = {count: state.count - 1}; 
         default:  
