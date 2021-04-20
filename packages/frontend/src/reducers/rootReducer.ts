@@ -1,16 +1,20 @@
+import { increment, decrement } from '../actions'
 
 const initialState = {
     count: 0 
 }
 
-const rootReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action = {type: ''}) => {
+    // Object.freeze(state); 
     switch(action.type) {
         case 'INCREMENT':
-            initialState.count ++; 
-            return state;  
+            console.log('increment!')
+            return state = {count: state.count + 1};
+            // return state;   
         case 'DECREMENT': 
-            initialState.count --;  
-            return state;  
+            // state.count --;  
+            console.log('decrement!')
+            return state = {count: state.count - 1}; 
         default:  
             return state;
     } 
