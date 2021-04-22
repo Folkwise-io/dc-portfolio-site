@@ -10,12 +10,6 @@ import "./style.scss";
 import Home from './components/home'; 
 import Counter from './components/Counter/counter'; 
 
-
-interface Counter {
-  counter: number;
-}
-
-
 const App = () => {
   return(
     <HashRouter>
