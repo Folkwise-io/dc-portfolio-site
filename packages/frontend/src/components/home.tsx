@@ -1,22 +1,12 @@
-import React from 'react'; 
-import LoginForm from "../LoginForm";
+import React from 'react';
 
-function noop() {
-  return;
-}
+export const Home = () => {
+  return (
+    <div>
+      <div>This is the home page!</div>
+      <button>Would you like to sign up?</button>
+    </div>
+  );
+};
 
-const Home = () => {
-    return (
-      <div>
-      <LoginForm
-        shouldRemember={true}
-        onPasswordChange={noop}
-        onRememberChange={noop}
-        onSubmit={noop}
-        onUsernameChange={noop}
-      />
-      </div>
-    )
-}
-
-export default Home; 
+export default Home;
