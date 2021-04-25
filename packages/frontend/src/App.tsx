@@ -7,7 +7,6 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import "./style.scss"; 
 
 // Components
-import Home from './components/home'; 
 import Counter from './components/Counter/counter'; 
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
       <Switch>
         <Route path='/'>
           <Counter /> 
-          <Home /> 
         </Route>
       </Switch>
     </HashRouter>
