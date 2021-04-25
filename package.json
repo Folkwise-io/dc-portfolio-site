@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "dev": "concurrently 'yarn --cwd packages/frontend dev' 'yarn --cwd packages/backend dev'",
+    "win_dev": "concurrently \"yarn --cwd packages/frontend dev\" \"yarn --cwd packages/backend dev\"",
     "db:init": "yarn --cwd packages/backend db:init",
     "db:migrate": "yarn --cwd packages/backend db:migrate",
     "db:seed": "yarn --cwd packages/backend db:seed"
