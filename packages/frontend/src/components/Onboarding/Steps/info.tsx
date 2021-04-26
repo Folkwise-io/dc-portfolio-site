@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Info() {
+
   return (
     <div>
       <div>Step 3</div>
