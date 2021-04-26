@@ -16,7 +16,7 @@ const App = () => {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/navbar">
+        <Route path="/">
           <NavBar />
         </Route>
 
