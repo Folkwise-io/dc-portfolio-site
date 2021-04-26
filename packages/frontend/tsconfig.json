@@ -9,7 +9,7 @@
     "target": "es5",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,     
+    "forceConsistentCasingInFileNames": false,     
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
