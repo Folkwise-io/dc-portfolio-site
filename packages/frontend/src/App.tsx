@@ -7,9 +7,11 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import './style.scss';
 
 // Components
-import Home from './Components/Home';
-import Counter from './Components/Counter/Counter';
-import Onboarding from './Components/Onboarding';
+import Home from './Components/home';
+import Counter from './Components/Counter/counter';
+import SignUp from './Components/Onboarding/signup';
+import Onboarding from './Components/Onboarding/Steps';
+
 
 const App = () => {
   return (
@@ -17,6 +19,10 @@ const App = () => {
       <Switch>
       <Route path="/Onboarding">
           <Onboarding />
+        </Route>
+
+      <Route path="/Signup">
+          <SignUp />
         </Route>
 
         <Route path="/counter">
