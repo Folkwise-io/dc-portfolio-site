@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const signup = () => {
   return (
@@ -6,10 +7,10 @@ export const signup = () => {
       <h3>Welcome, Create your account</h3>
       <h4>Connect your Github to get started</h4>
 
-      <button>Connect to Github</button>
+      <Link to="/onboarding">Connect to Github</Link>
       <button>Already have an account? Login</button>
     </div>
-  )
-}
+  );
+};
 
-export default signup
+export default signup;
