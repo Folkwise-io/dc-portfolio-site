@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import { MenuList } from "./MenuList"; 
 
 const NavBar = () => {
   return (
     <main>
-      <nav>
-        <ul>
-          <li>Simulation</li>
-          <li>Explore</li>
-          <li>Learn</li>
-          <li>Sign in</li>
-          <li>Sign up</li>
+      <nav className="navbar">
+          <div>Simulation</div>
+        <ul className="hamburger">
+          {MenuList.map( (item, index) => {
+            return (
+              <li key={index}>
+                <a className={item.classNm} href={item.link}>
+                  {item.name}
+                </a>
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </main>

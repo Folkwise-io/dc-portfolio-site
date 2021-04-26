@@ -8,12 +8,14 @@ import "./style.scss";
 
 // Components
 import Counter from './components/Counter/counter'; 
+import NavBar from './components/NavBar/navbar'; 
 
 const App = () => {
   return(
     <HashRouter>
       <Switch>
         <Route path='/'>
+          <NavBar />
           <Counter /> 
         </Route>
       </Switch>
