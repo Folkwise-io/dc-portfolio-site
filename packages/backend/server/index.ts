@@ -1,7 +1,7 @@
 const express = require('express')
 const session = require('express-session')
 const morgan = require('morgan')
-var passport = require('passport')  // Using var since passport is also declared in config/passport.ts
+const passport = require('passport')
 
 const app = express(); 
 

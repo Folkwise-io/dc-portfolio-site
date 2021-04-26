@@ -7,7 +7,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import './style.scss';
 
 // Components
-import Home from './Components/Home';
+import Home from './components/Home/home';
 import Counter from './Components/Counter/Counter';
 import Onboarding from './Components/Onboarding';
 

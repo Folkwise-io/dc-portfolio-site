@@ -1,6 +1,7 @@
 /* Passport / GitHub Strategy Configuration */
+export {}
 
-var passport = require('passport') // Using var since passport is also declared in index.ts
+const passport = require('passport')
 const GitHubStrategy = require('passport-github2').Strategy
 
 require('dotenv').config()
@@ -10,13 +11,12 @@ require('dotenv').config()
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://127.0.0.1:3000/auth/github/callback"
+    callbackURL: "http://127.0.0.1:5000/auth/github/callback"
 },
     function (accessToken, refreshToken, profile, done) {
 
-        // To keep it simple for now, the user's GitHub profile is returned to
-        // represent the logged-in user
-        // TODO - associate  GitHub account with user record in db and return user
+        // To keep it simple for now, the user's GitHub profile is returned to represent the logged-in user
+        // TODO - associate GitHub account with user record in db and return user
         return done(null, profile);
     }
 ));

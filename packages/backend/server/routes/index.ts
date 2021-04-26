@@ -2,6 +2,7 @@ export {}
 
 const router = require('express').Router()
 
+router.use('/auth', require('./auth'))
 router.use('/echo', require('./echo'))
 router.use('/counter', require('./counter'))
 

@@ -1,7 +1,7 @@
 **/node_modules/
 *.log
 
-packages/backend/config/.env
+packages/backend/.env
 
 packages/frontend/dist/bundle.js
 packages/frontend/dist/index.html
