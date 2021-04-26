@@ -5,7 +5,7 @@ export const Home = () => {
 
   const authGithub = () => {
     console.log('Authenticating with GitHub...')
-    axios.get(`/auth/github`)
+    axios.get(`/api/auth/github`)
   };
 
   return (

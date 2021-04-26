@@ -21,7 +21,6 @@ passport.use(new GitHubStrategy({
     }
 ));
 
-
 // Setup Passport sessions to support persistent login sessions
 passport.serializeUser(function (user, done) {
     done(null, user);
@@ -30,3 +29,5 @@ passport.serializeUser(function (user, done) {
 passport.deserializeUser(function (obj, done) {
     done(null, obj);
 });
+
+module.exports = passport;
