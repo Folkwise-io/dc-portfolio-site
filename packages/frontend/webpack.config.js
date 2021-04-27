@@ -42,6 +42,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'], //after ts
+    alias: {"react-dom": "@hot-loader/react-dom"},
   },
   output: {
     filename: 'bundle.js',
