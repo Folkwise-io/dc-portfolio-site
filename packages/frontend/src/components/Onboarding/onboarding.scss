@@ -34,14 +34,16 @@
 .project__item {
   background-color: gray;
   width: 8rem;
-  height: 8rem;
   &:not(:last-child) {
     margin-right: 1rem;
   }
 }
 
 .project__text {
-  text-align: center;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 8rem;
 }
 
 .project-card {
