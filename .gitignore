@@ -1,5 +1,8 @@
 **/node_modules/
 *.log
+
+packages/backend/.env
+
 packages/frontend/dist/bundle.js
 packages/frontend/dist/index.html
 packages/frontend/dist/main.css
