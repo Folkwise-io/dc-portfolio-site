@@ -12,12 +12,11 @@ import Counter from './Components/Counter/counter';
 import SignUp from './Components/SignUp/signup';
 import Onboarding from './Components/Onboarding/onboarding';
 
-
 const App = () => {
   return (
     <HashRouter>
       <Switch>
-      <Route path="/Onboarding">
+        <Route path="/Onboarding">
           <Onboarding />
         </Route>
 
