@@ -3,10 +3,10 @@ import React from 'react';
 function Info() {
 
   return (
-    <div>
-      <div>Step 3</div>
-      <h3>Double check your contact info.</h3>
-      <p>
+    <div className="project-card">
+      <div className="utility-margin-bottom-medium">Step 3</div>
+      <h3 className="utility-margin-bottom-medium">Double check your contact info.</h3>
+      <p className="utility-margin-bottom-medium">
         Adding relevant social media accounts is a way for potential employers
         to get a better idea about your personality and what you’re like beyond
         your “About me” section.

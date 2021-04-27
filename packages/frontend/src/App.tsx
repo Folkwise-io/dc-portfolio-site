@@ -9,8 +9,8 @@ import './style.scss';
 // Components
 import Home from './Components/home';
 import Counter from './Components/Counter/counter';
-import SignUp from './Components/Onboarding/signup';
-import Onboarding from './Components/Onboarding/Steps';
+import SignUp from './Components/SignUp/signup';
+import Onboarding from './Components/Onboarding/onboarding';
 
 
 const App = () => {

@@ -2,10 +2,10 @@ import React from 'react';
 
 function aboutMe() {
   return (
-    <div>
-      <div>Step 2</div>
-      <h3>Edit your about me section.</h3>
-      <p>
+    <div className="project-card">
+      <div className="utility-margin-bottom-medium">Step 2</div>
+      <h3 className="utility-margin-bottom-medium"> Edit your about me section.</h3>
+      <p className="utility-margin-bottom-medium">
         Don’t go overboard with every little detail. Include relevant
         highlights. And don’t forget to include your personality. Others may
         have your skills, experience and even education—but your hobbies and
@@ -14,7 +14,10 @@ function aboutMe() {
         easier time getting hired.
       </p>
 
-      <textarea />
+      <textarea className="utility-margin-bottom-medium"/>
+
+      <div className="break-line">&nbsp;</div>
+
     </div>
   );
 }

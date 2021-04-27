@@ -2,10 +2,10 @@ import React from 'react';
 
 function Layout() {
   return (
-    <div>
-      <div>Step 5</div>
-      <h3>Recomended portfolio layout.</h3>
-      <p>
+    <div className="project-card">
+      <div className="utility-margin-bottom-medium">Step 5</div>
+      <h3 className="utility-margin-bottom-medium">Recomended portfolio layout.</h3>
+      <p className="utility-margin-bottom-medium">
         Here is the reccommend portfolio layout for you based on your needs.
       </p>
 
