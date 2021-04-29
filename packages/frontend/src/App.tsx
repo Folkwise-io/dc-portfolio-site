@@ -7,22 +7,21 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import './style.scss';
 
 // Components
-
-import Counter from './components/Counter/counter'; 
-import NavBar from './components/NavBar/navbar'; 
-import Home from './Components/Home';
-import Onboarding from './Components/Onboarding';
+import Home from './Components/home';
+import Counter from './Components/Counter/counter';
+import SignUp from './Components/SignUp/signup';
+import Onboarding from './Components/Onboarding/onboarding';
 
 const App = () => {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/">
-          <NavBar />
-        </Route>
-
         <Route path="/Onboarding">
           <Onboarding />
+        </Route>
+
+      <Route path="/Signup">
+          <SignUp />
         </Route>
 
         <Route path="/counter">
